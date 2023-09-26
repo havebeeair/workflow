@@ -1,0 +1,332 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.react-flow {
+  --bg-color: #eeeeee;
+  background-color: var(--bg-color);
+}
+.custom-node {
+  min-height: 100px;
+  width: 250px;
+  border: 1px solid;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+  position: relative;
+}
+.add-node {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top: none;
+  background: #ffffff;
+  border: 1px dashed #d9d9d9;
+  border-radius: 4px;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+.btns-box {
+  display: flex;
+  justify-content: end;
+  width: 60px;
+  align-items: center;
+}
+.btns-box > button {
+  border-radius: 4px;
+  border: 0.5px solid transparent;
+}
+.select-node-type {
+  background-color: #fff;
+  position: absolute;
+  left: calc(35% + 26px);
+  top: 65px;
+  width: 286px;
+  background: #ffffff;
+  border-right: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  z-index: 500;
+}
+.select-node-type > p {
+  cursor: pointer;
+  margin: 0;
+  text-align: left;
+  padding: 17px 52px 17px 30px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.select-node-type > p:hover {
+  background: #ffe9da;
+  color: #cc4e00;
+}
+.save__controls {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 4;
+  font-size: 12px;
+}
+
+.save__controls button {
+  margin-left: 5px;
+}
+.edgebutton {
+  width: 24px;
+  height: 24px;
+  background: #eeeeee;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 12px;
+  line-height: 1;
+}
+.edgebutton:hover {
+  background: #e2e2e2;
+  border-radius: 8px;
+  width: 24px;
+  height: 24px;
+}
+.edgebutton-foreignobject div {
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+}
+.node-trigger-container .custom-node {
+  background: #ecf8f3;
+  border: 1px solid #bcdcd6;
+}
+.node-trigger-container > .node-body > .node-type {
+  background: #e2f7f0;
+  width: 86px;
+}
+.node-trigger-container > .node-body > p {
+  background: #ecf8f3;
+}
+.node-condition-container .custom-node {
+  background: #e8dff5;
+  border: 1px solid #cdb9e9;
+}
+.node-condition-container > .node-body > .node-type {
+  background: #e8dff5;
+  width: 101px;
+}
+.node-condition-container > .node-body > p {
+  background: #e8dff5;
+}
+.node-action-container .custom-node {
+  background: #eaf3fa;
+  border: 1px solid #b1d3ec;
+}
+.node-action-container > .node-body > .node-type {
+  background: #daeaf6;
+  width: 81px;
+}
+.node-action-container > .node-body > p {
+  background: #eaf3fa;
+}
+.node-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 22px;
+  border-radius: 4px 4px 0px 0px;
+  padding: 1px 13px;
+  color: rgba(0, 0, 0, 0.65);
+  font-stretch: 100;
+  font-family: "Open Sans";
+  font-size: 11px;
+  line-height: 20px;
+  box-sizing: border-box;
+}
+.node-body > p {
+  margin: 0 10px;
+  padding: 5px 10px;
+  border-radius: 4px 4px 0px 0px;
+}
+.edit-button,
+.delete-button {
+  background: transparent;
+  cursor: pointer;
+}
+.edit-button:hover path,
+.delete-button:hover path {
+  fill-opacity: 0.45;
+}
+.delete-button {
+  margin-left: 3px;
+}
+.node-info {
+  background-color: #fff;
+  margin-top: 12px;
+  border-radius: 4px;
+  padding: 16px 13px;
+  box-sizing: border-box;
+  min-height: 54px;
+  text-align: left;
+  line-height: 22px;
+  font-size: 14px;
+  width: 100%;
+}
+.dummy-container {
+  width: 280px;
+  background: transparent;
+  position: relative;
+}
+.Dummy-trigger-node {
+  width: 146px;
+  height: 22px;
+  border: 1px dashed #bcdcd6;
+  padding: 16px;
+  border-radius: 5px;
+  text-align: center;
+  background: #ecf8f3;
+  margin: auto;
+}
+.add-Trigger {
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.88);
+  cursor: pointer;
+  display: flex;
+  width: 146px;
+  align-items: center;
+  justify-content: center;
+}
+.add-Trigger > svg {
+  margin-right: 8px;
+}
+.placeholder-node {
+  margin: auto;
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  border: 1px dashed #d9d9d9;
+  border-radius: 8px;
+}
+.placeholder-node > div {
+  text-align: center;
+  line-height: 44px;
+  cursor: pointer;
+  margin: auto;
+}
+.handle {
+  visibility: hidden;
+}
+.react-flow__edge-path {
+  stroke: rgba(0, 0, 0, 0.65);
+}
+.node-title {
+  margin: 0;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.88);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.title-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 22px;
+}
+.workflow-modal .ant-modal-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.workflow-modal .title-text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 16px;
+}
+.trigger-selection-modal {
+  width: 728px !important;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px 40px;
+  margin-top: 20px;
+  overflow-y: scroll;
+  max-height: 206px;
+  overflow-x: hidden;
+}
+.grid > div {
+  text-align: center;
+  border-radius: 4px;
+  width: 140px;
+  height: 73px;
+  padding: 12px 8px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+}
+.grid p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+}
+.grid > div:hover {
+  background: #fff6f0;
+  border: 1px solid #f07635;
+  cursor: pointer;
+  height: 71px;
+}
+.workflow-modal .ant-btn-primary {
+  background: #cc4e00;
+}
+.workflow-modal .ant-btn-primary:hover,
+.workflow-modal .ant-btn-primary:active {
+  background: #ab4100;
+}
+.workflow-modal .ant-btn-default:hover,
+.workflow-modal .ant-btn-default:active {
+  border: 1px solid #f07635;
+  color: #f07635;
+}
+.modal-popover {
+  width: 265px;
+}
+.react-flow__edge-path-selector:hover {
+  cursor: pointer;
+}
+.react-flow__edge-path-selector:hover + .react-flow__edge-path,
+.react-flow__edge-path:hover {
+  stroke: rgba(0, 0, 0, 0.65);
+  cursor: pointer;
+}
+.react-flow__edge-path-selector {
+  fill: none;
+  stroke: transparent !important;
+  stroke-width: 30;
+}
+.automation-info {
+  text-align: center;
+  margin: 0px 0px 24px;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.44);
+}
+.end-node {
+  width: 250px;
+  background: transparent;
+  height: 10px;
+}
+.end-node > .node-info {
+  text-align: center;
+}
